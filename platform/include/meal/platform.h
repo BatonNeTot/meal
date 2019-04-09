@@ -1,9 +1,9 @@
 #ifndef MEAL_PLATFORM_H
 #define MEAL_PLATFORM_H
 
-#define _x32
+//#define _x32
 
-//#define _x64
+#define _x64
 
 #include <stdint.h>
 

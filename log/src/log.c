@@ -174,7 +174,8 @@ static int32_t _log(log_level level, const char *tag, const char *frmt, va_list 
     struct tm *timeinfo;
 
     gettimeofday(&rawtime, NULL);
-    timeinfo = localtime(&rawtime.tv_sec);
+    const time_t tv_sec = rawtime.tv_sec;
+    timeinfo = localtime(&tv_sec);
 
 // ----TIME STAMP----
 

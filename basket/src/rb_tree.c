@@ -11,12 +11,6 @@
 
 typedef struct node_t node_t;
 
-typedef enum stackFlag {
-    WAS_NONE,
-    WAS_LEFT,
-    WAS_RIGHT,
-} stackFlag;
-
 typedef enum color {
     RED,
     BLACK,
@@ -49,7 +43,7 @@ typedef struct iter_box_t {
 
 #define ITER(ptr) ((iter_box_t *)ptr)
 
-rb_tree_t *rb_tree_init_via(const alloc_t *alloc, cmp_f compare, size_t typeSize, size_t bufferSize) {
+rb_tree_t *rb_tree_init_via(const alloc_t *alloc, cmp_f compare, uint32_t typeSize, uint32_t bufferSize) {
     ASSERT_ERROR(compare, TAG, "NULL comparator") {
         return NULL;
     }
@@ -1164,7 +1158,7 @@ bool rb_tree_remove_iter(rb_tree_t *tree, iter_t *iter, void *dst) {
     return true;
 }
 
-inline size_t rb_tree_size(rb_tree_t *tree) {
+inline uint32_t rb_tree_size(rb_tree_t *tree) {
     ASSERT_ERROR(tree, TAG, "NULL tree") {
         return 0;
     }

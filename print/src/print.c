@@ -199,7 +199,7 @@ static inline int printArg(printInfo *info, writer_f writer, void *data, va_list
             break;
         }
         case 'p':case 'P':{
-            buffer = utos((uint32_t)value.p, arg.i.radix, arg.i.isUpper, &arg.fullLength);
+            buffer = utos((WST)value.p, arg.i.radix, arg.i.isUpper, &arg.fullLength);
             break;
         }
         case 'f':case 'F':{
