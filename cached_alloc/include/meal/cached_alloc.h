@@ -9,7 +9,7 @@ typedef struct cached_alloc_t cached_alloc_t;
 
 cached_alloc_t *cached_alloc_init_via(const alloc_t *alloc, uint32_t bufferSize);
 
-#define cached_alloc_init(bufferSize) cached_alloc_init_via(NULL, bufferSize);
+#define cached_alloc_init(bufferSize) cached_alloc_init_via(NULL, bufferSize)
 
 void cached_alloc_term(cached_alloc_t *alloc);
 

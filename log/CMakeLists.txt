@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.13)
 include(../utils.cmake)
-project_guarded(log)
+project(log)
 
 set(CMAKE_C_STANDARD 11)
 
